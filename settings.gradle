@@ -1,0 +1,3 @@
+rootProject.name = "loading"
+include ':app'
+include ':lib'

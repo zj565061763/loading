@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="100dp"
+        android:onClick="onClick"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
+    <com.sd.lib.loading.FLoadingView
+        android:id="@+id/view_loading"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:translationZ="1000dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>
