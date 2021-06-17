@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 _binding.viewLoading.setConsumeTouchEvent(true)
                 // 设置内容区域背景
                 _binding.viewLoading.setContentBackgroundResource(R.drawable.lib_loading_bg_content)
+                // 设置文字
+                _binding.viewLoading.setText("loading")
                 _binding.viewLoading.visibility = View.VISIBLE
                 v.postDelayed({ _binding.viewLoading.visibility = View.GONE }, 5000)
             }
