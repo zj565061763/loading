@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v) {
             _binding.btn -> {
                 Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()
+                // 设置是否拦截事件
                 _binding.viewLoading.setConsumeTouchEvent(true)
+                // 设置内容区域背景
+                _binding.viewLoading.setContentBackgroundResource(R.drawable.lib_loading_bg_content)
                 _binding.viewLoading.visibility = View.VISIBLE
                 v.postDelayed({ _binding.viewLoading.visibility = View.GONE }, 5000)
             }

@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class FLoadingView extends FrameLayout {
+    private View view_content;
     private View view_progress;
     private TextView tv_text;
     private boolean mConsumeTouchEvent = true;
@@ -21,6 +22,7 @@ public class FLoadingView extends FrameLayout {
     public FLoadingView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.lib_loading_view_loading, this, true);
+        view_content = findViewById(R.id.lib_loading_view_content);
         view_progress = findViewById(R.id.lib_loading_view_progress);
         tv_text = findViewById(R.id.lib_loading_tv_text);
     }
@@ -50,6 +52,15 @@ public class FLoadingView extends FrameLayout {
             params.height = size;
             view_progress.setLayoutParams(params);
         }
+    }
+
+    /**
+     * 设置内容区域背景资源id
+     *
+     * @param resId 景资源id
+     */
+    public void setContentBackgroundResource(int resId) {
+        view_content.setBackgroundResource(resId);
     }
 
     @Override
